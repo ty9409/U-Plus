@@ -1,0 +1,48 @@
+// 재고 테이블
+create table stock(
+sc_num number(6) unique not null,
+sc_model varchar2(30) primary key,
+sc_amount number(3) not null,
+sc_price number(10) not null,
+sc_company varchar2(20) not null,
+sc_date date not null,
+sc_image varchar2(100) not null
+);
+
+// 직원 테이블
+create table staff(
+sf_num number(4) unique not null,
+sf_rank varchar2(20) not null,
+sf_name varchar2(20) primary key,
+sf_birth date not null,
+sf_phone varchar2(30) not null,
+sf_addre varchar2(100) not null,
+sf_basic number(10) not null,
+sf_inct number(10),
+sf_total number(10) not null,
+sf_sales number(3),
+sf_date date not null,
+sf_outdate date not null,
+sf_Image varchar2(100) 
+);
+
+// 판매 테이블
+create table sales(
+sa_num number(8) primary key,
+sa_name varchar2(10) not null,
+sa_phone varchar2(30) not null,
+sc_model varchar2(30) references stock(sc_model),
+sa_serial varchar2(40) unique not null,
+sa_plan number(20) not null,
+sa_contract varchar2(20) not null,
+sa_inct number(10),
+sf_name varchar2(20) references staff(sf_name),
+sa_date date not null,
+sa_memo varchar2(200)
+);
+
+// 관리자 테이블
+create table administrator(
+ad_id varchar2(30) primary key,
+ad_pw varchar2(30) not null
+);

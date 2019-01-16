@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+fx:controller="control.StockModifyController" >
+	<VBox alignment="center">
+		<padding>
+			<Insets top="20" right="10" bottom="10" left="10" />
+		</padding>
+		<spacing>20</spacing>
+		<children>
+			<HBox alignment="center">
+				<Label text="-------------- 재  고  수  정 -------------" />
+			</HBox>
+			<HBox alignment="center">
+				<Label text="재고번호 : " />
+				<TextField fx:id="txtNum" prefWidth="170" />
+			</HBox>
+			<HBox alignment="center">
+				<Label text="모 델 명 : " />
+				<TextField fx:id="txtModel" prefWidth="170" />
+			</HBox>
+			<HBox alignment="center">
+				<Label text="수     량 : " />
+				<TextField fx:id="txtAmount" prefWidth="170" />
+			</HBox>
+			<HBox alignment="center">
+				<Label text="출 고 가 : " />
+				<TextField fx:id="txtPrice" prefWidth="170" />
+			</HBox>
+			<HBox alignment="center">
+				<Label text="제 조 사 : " />
+				<ComboBox fx:id="cbCompany" prefWidth="170" />
+			</HBox>
+			<HBox alignment="center">
+				<Label text="입 고 일 : " />
+				<DatePicker fx:id="dpDate" prefWidth="170" />
+			</HBox>
+			<HBox alignment="center">
+				<spacing>3</spacing>
+				<Label text="이 미 지 : " />
+				<TextField fx:id="txtImage" prefWidth="140" />
+				<Button fx:id="btnImage" text="..." />
+			</HBox>
+			<HBox alignment="center">
+				<padding>
+					<Insets left="45" right="45" />
+				</padding>
+				<spacing>40</spacing>
+				<Button fx:id="btnModify" text="수  정" prefWidth="60" />
+				<Button fx:id="btnCancel" text="취  소" prefWidth="60" />
+			</HBox>
+		</children>
+	</VBox>
+</AnchorPane>
