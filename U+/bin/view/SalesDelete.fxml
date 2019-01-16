@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+	fx:controller="control.SalesDeleteController" prefHeight="85"
+	prefWidth="300">
+
+	<VBox>
+		<padding>
+			<Insets top="20" bottom="15" left="20" />
+		</padding>
+		<Label text="선택한 판매정보를 삭제하시겠습니까?" />
+		<HBox>
+		<Label fx:id="txtNumber"/>
+		<Label fx:id="txtModel"/>
+		<Label fx:id="txtName"/>
+		<Label fx:id="txtInct"/>
+		<Label fx:id="txtPlan"/>
+		</HBox>
+		<HBox>
+			<padding>
+				<Insets top="30" left="140" />
+			</padding>
+			<spacing>20</spacing>
+			<Button fx:id="btnOk" text="확  인" prefWidth="60" />
+			<Button fx:id="btnCancel" text="취  소" prefWidth="60" />
+		</HBox>
+	</VBox>
+</AnchorPane>
+

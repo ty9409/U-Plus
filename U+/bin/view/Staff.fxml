@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+	prefHeight="500" prefWidth="950"
+	fx:controller="control.StaffController">
+	<VBox>
+		<padding>
+			<Insets top="10" right="10" bottom="10" left="10" />
+		</padding>
+		<Label
+			text="       직  원  관  리                              직  원  목  록" />
+		<HBox alignment="center">
+			<padding>
+				<Insets top="10" right="10" bottom="10" left="10" />
+			</padding>
+			<VBox>
+				<padding>
+					<Insets top="0" right="30" bottom="10" left="15" />
+				</padding>
+				<spacing>10</spacing>
+				<children>
+					<HBox>
+						<Button fx:id="btnRegister" text="직원 정보 등록" prefHeight="40"
+							prefWidth="150" />
+					</HBox>
+					<HBox>
+						<Button fx:id="btnModify" text="직원 정보 수정" prefHeight="40"
+							prefWidth="150" />
+					</HBox>
+					<HBox>
+						<Button fx:id="btnDelete" text="직원 정보 삭제" prefHeight="40"
+							prefWidth="150" />
+					</HBox>
+					<HBox>
+					<spacing>10</spacing>
+						<Button fx:id="btnBarChart" text="판매량" prefHeight="40"
+							prefWidth="70" />
+							<Button fx:id="btnBarChart2" text="급 여" prefHeight="40"
+							prefWidth="70" />
+					</HBox>
+					<HBox>
+						<Button fx:id="btnAll" text="전체 리스트" prefHeight="40"
+							prefWidth="150" />
+					</HBox>
+					<HBox>
+						<Button fx:id="btnBack" text="뒤 로 가 기" prefHeight="40"
+							prefWidth="150" />
+					</HBox>
+					<HBox fx:id="imageBox">
+					</HBox>
+					<VBox alignment="CENTER">
+						<spacing>10</spacing>
+						<children>
+							<ImageView fx:id="imageView" fitWidth="170"
+								fitHeight="170" pickOnBounds="true" preserveRatio="true">
+								<image>
+									<Image url="image/ImageChoice.png" />
+								</image>
+							</ImageView>
+						</children>
+					</VBox>
+				</children>
+			</VBox>
+			<TableView fx:id="tableView" prefHeight="450"
+				prefWidth="800" />
+		</HBox>
+	</VBox>
+</AnchorPane>
+
